@@ -16,7 +16,17 @@ cal.onclick = () => {
 
     if (n!="" && s!="" && a!="" && sp!="" && rs!="") {
         if (s > 0 && a > 0 && a < 60 && sp >= 0 && sp <= 100 && rs >= 0 && rs <= 100){
-            alert("valid data")
+            let restOfAge = 60 - a
+            let an_salary = s * 12
+            let savingPart;
+            let totalSaving = (an_salary * 30) / 100
+            for (let i = 1; i < restOfAge; i++) {
+                an_salary = (an_salary * rs) / 100 + an_salary
+                savingPart = (an_salary * 30) / 100
+                totalSaving = totalSaving + savingPart
+            }
+            console.log(an_salary / 12);
+            par.innerHTML = `Total of saving is ${totalSaving}`
         }else {
             alert("invalid data")
         }
