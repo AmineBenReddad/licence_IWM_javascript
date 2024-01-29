@@ -5,6 +5,8 @@ const savingPercentage = document.getElementById("savingPercentage")
 const raiseSalary = document.getElementById("raiseSalary")
 const par  = document.getElementById("par")
 const cal = document.getElementById("calculate")
+const span = document.getElementById("span")
+
 
 
 cal.onclick = () => {
@@ -25,8 +27,8 @@ cal.onclick = () => {
                 savingPart = (an_salary * 30) / 100
                 totalSaving = totalSaving + savingPart
             }
-            console.log(an_salary / 12);
-            par.innerHTML = `Total of saving is ${totalSaving}`
+            par.innerHTML = `Hi ${n}! Your total of saving is : `
+            span.innerHTML = `${totalSaving} DH`
         }else {
             alert("invalid data")
         }
