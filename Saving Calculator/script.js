@@ -21,10 +21,10 @@ cal.onclick = () => {
             let restOfAge = 60 - a
             let an_salary = s * 12
             let savingPart;
-            let totalSaving = (an_salary * 30) / 100
+            let totalSaving = (an_salary * sp) / 100
             for (let i = 1; i < restOfAge; i++) {
                 an_salary = (an_salary * rs) / 100 + an_salary
-                savingPart = (an_salary * 30) / 100
+                savingPart = (an_salary * sp) / 100
                 totalSaving = totalSaving + savingPart
             }
             par.innerHTML = `Hi ${n}! Your total of saving is : `
